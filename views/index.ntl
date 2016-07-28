@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save Websites To A Mongo Database</title>
+</head>
+<body>
+  <h2>This can only handle http sites. https sites will break the code.</h2>
+  <form role="form" method="post" action="getSiteData"> Enter end point:
+    <input name="url" placeholder="url">
+    <button>submit</button>
+  </form> 
+  <div id='jobNumber'>#message#</div>
+
+  <form role="form" method="post" action="renderData"> Look up job status:
+    <input name="jobID" placeholder="job Id">
+    <button>submit</button>
+  </form> 
+</body>
+</html>
