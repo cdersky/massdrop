@@ -35,7 +35,7 @@ app.set('views', './views'); // specify the views directory
 app.set('view engine', 'ntl'); // register the template engine
 // end of templating engine
 
-
+//////////////////// Routes
 // main page
 app.get('/', function (req, res) {
   res.render('index', { message: ''});
@@ -67,7 +67,7 @@ app.post('/:action', function(req, res){
     })
     .exec(function(err, site){
       if(err){
-        res.send('error retrieving item ', err);
+        res.render('index', { message: 'job id is invalid'});
       } else {
         if(site.downloadComplete){ // if download is complete
           res.send(site.data); // render page
